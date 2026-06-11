@@ -1,48 +1,57 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
-  background-color: #222;
-  color: white;
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
-}
-
-article {
-  background: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.news-list {
-  background: #fff;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-footer {
-  background-color: #222;
+  background: #0077b6; /* 메인 블루 */
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #023e8a; /* 딥 블루 */
+}
+nav a {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+nav a:hover {
+  background: #0096c7; /* hover 시 밝은 블루 */
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-top: 5px solid #0077b6; /* 블루 포인트 */
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-top: 5px solid #90e0ef; /* hover 시 라이트 블루 */
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
 }
